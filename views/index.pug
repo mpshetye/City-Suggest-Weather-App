@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css' integrity='sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==' crossorigin='anonymous')
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl' crossorigin='anonymous')
+    link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css')
+    link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons-wind.min.css')
+    link(rel='stylesheet' href='/css/style.css')
+    title Weather App
+  body
+    #failure.alert.alert-danger.alert-dismissible.fade(role='alert')
+      strong Error!
+      | City Not Found. Try a different city search
+      button.close(type='button' data-dismiss='alert' aria-label='Close')
+        span(aria-hidden='true') ×
+    .jumbotron.my-5
+      h2#weatherHead.text-center.text-info Weather Application
+      form#formSearch(style='margin: 0em 35em;')
+        .container.my-4
+          #divSearch.input-group.mb-3
+            input#searchText.form-control(type='text' placeholder='Search City' aria-label='Search City' aria-describedby='basic-addon2')
+            .input-group-append
+              button.btn.btn-outline-secondary(type='submit') Search
+      #box1.container.card(style='height:24rem; width: 18rem; margin-top: 6rem; background-color:#cad5e5;')
+        .card-body
+          .wave.-one
+          .wave.-two
+          .wave.-three
+          #weathercon
+          #infor
+            h4.location
+              i.fas.fa-street-view(style='color:#000000')
+              span#locate
+            p#date
+            h1#temp.temp
+            h3#minMax(class='tempmin_max')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js' integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0' crossorigin='anonymous')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    script(src='/js/index.js')
+
