@@ -7,8 +7,8 @@ $("#searchText").keyup(function () {
   if (cityName.length >= 3) {
     $.ajax({
       url: `http://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(
-        cityName
-        )}&appid=d8395d622bdb1178d90f31ca72915d78&units=metric`,
+      city
+    )}&appid=YOUR_API_ID&units=metric`,
         method: "GET",
         timeout: 0,
         success: function (response) {
@@ -99,9 +99,6 @@ $("#searchText").keyup(function () {
           $("div#box1").css("background-color", "#cad5e5");
 
         } else {
-
-          // document.getElementById("box1").style.backgroundColor =
-          // "rgb(0 0 0 / 24%)";
           $("div#box1").css("background-color", "#c1c1c1");
         }
 
